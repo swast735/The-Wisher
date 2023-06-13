@@ -2,6 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -31,5 +34,5 @@
             android:name="com.example.thewisher.Templates"
             tools:layout="@layout/occassion" />
     </RelativeLayout>
-
+    </ScrollView>
 </layout>
