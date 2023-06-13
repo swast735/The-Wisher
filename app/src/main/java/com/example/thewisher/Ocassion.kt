@@ -11,15 +11,10 @@ import com.example.thewisher.databinding.FragmentOcassionBinding
 
 class Ocassion : Fragment() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val bind:FragmentOcassionBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_ocassion, container, false)
         return bind.root
     }
