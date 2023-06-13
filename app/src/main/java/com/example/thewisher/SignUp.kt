@@ -69,6 +69,7 @@ class SignUp : BottomSheetDialogFragment() {
                 val si: GoogleSignInAccount? =GoogleSignIn.getLastSignedInAccount(this.requireContext())
                 val name=si?.displayName
                 Log.d("msg","$name")
+                sp.edit().putString("name",name).apply()
                 startActivity(Intent(requireContext(),FrameSelect::class.java))
             }
         }
