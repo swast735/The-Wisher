@@ -1,7 +1,10 @@
 package com.example.thewisher
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +12,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.thewisher.databinding.FragmentSignUpBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -20,7 +24,9 @@ import com.google.firebase.auth.GoogleAuthProvider
 class SignUp : BottomSheetDialogFragment() {
     lateinit var fauth:FirebaseAuth
     lateinit var gsc:GoogleSignInClient
+    lateinit var sp:SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
+        sp= requireActivity().getSharedPreferences("SharedPref",Context.MODE_PRIVATE)
         fauth= FirebaseAuth.getInstance()
         super.onCreate(savedInstanceState)
     }
@@ -60,8 +66,14 @@ class SignUp : BottomSheetDialogFragment() {
         val cred=GoogleAuthProvider.getCredential(idTkn,null)
         fauth.signInWithCredential(cred).addOnCompleteListener(){
             if(it.isSuccessful){
+                val si: GoogleSignInAccount? =GoogleSignIn.getLastSignedInAccount(this.requireContext())
+                val name=si?.displayName
+                Log.d("msg","$name")
                 startActivity(Intent(requireContext(),FrameSelect::class.java))
             }
         }
     }
+
+
+
 }
