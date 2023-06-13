@@ -28,11 +28,12 @@
             android:text=""
             android:textSize="30sp" />
         <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/temps"
             android:layout_below="@id/hello"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.thewisher.Templates"
-            tools:layout="@layout/occassion" />
+            android:name="com.example.thewisher.Ocassion"
+            tools:layout="@layout/fragment_ocassion" />
     </RelativeLayout>
     </ScrollView>
 </layout>
