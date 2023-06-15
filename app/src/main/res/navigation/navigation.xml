@@ -10,12 +10,36 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_templates"
-            app:destination="@id/templates" />
+            android:id="@+id/action_homeFragment_to_newyear"
+            app:destination="@id/newyear" />
+        <action
+            android:id="@+id/action_homeFragment_to_anniversary"
+            app:destination="@id/anniversary" />
+        <action
+            android:id="@+id/action_homeFragment_to_birthday"
+            app:destination="@id/birthday" />
+        <action
+            android:id="@+id/action_homeFragment_to_wedding"
+            app:destination="@id/wedding" />
     </fragment>
     <fragment
-        android:id="@+id/templates"
-        android:name="com.example.thewisher.Templates"
-        android:label="fragment_templates"
-        tools:layout="@layout/fragment_templates" />
+        android:id="@+id/anniversary"
+        android:name="com.example.thewisher.Anniversary"
+        android:label="fragment_anniversary"
+        tools:layout="@layout/fragment_anniversary" />
+    <fragment
+        android:id="@+id/birthday"
+        android:name="com.example.thewisher.Birthday"
+        android:label="fragment_birthday"
+        tools:layout="@layout/fragment_birthday" />
+    <fragment
+        android:id="@+id/wedding"
+        android:name="com.example.thewisher.Wedding"
+        android:label="fragment_wedding"
+        tools:layout="@layout/fragment_wedding" />
+    <fragment
+        android:id="@+id/newyear"
+        android:name="com.example.thewisher.Newyear"
+        android:label="fragment_newyear"
+        tools:layout="@layout/fragment_newyear" />
 </navigation>
