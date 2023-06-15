@@ -19,6 +19,7 @@ class Ocassion : Fragment() {
         val bind:FragmentOcassionBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_ocassion, container, false)
         bind.bday.setOnClickListener{
             Toast.makeText(requireContext(), "Birthday, Loading", Toast.LENGTH_SHORT).show()
+
         }
         bind.anniday.setOnClickListener{
             Toast.makeText(requireContext(), "Anniversary, Loading", Toast.LENGTH_SHORT).show()
