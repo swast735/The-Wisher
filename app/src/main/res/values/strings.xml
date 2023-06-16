@@ -12,4 +12,6 @@
     <string name="wedding">Wedding</string>
     <string name="anniversary">Anniversary</string>
     <string name="choose_the_event">Choose The Event</string>
+    <string name="back">back</string>
+    <string name="next">next</string>
 </resources>

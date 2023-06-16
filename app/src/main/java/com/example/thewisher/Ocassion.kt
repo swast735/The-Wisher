@@ -20,16 +20,21 @@ class Ocassion : Fragment() {
         val bind:FragmentOcassionBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_ocassion, container, false)
         bind.bday.setOnClickListener{
             Toast.makeText(requireContext(), "Birthday, Loading", Toast.LENGTH_SHORT).show()
-            Navigation.findNavController(it)
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_birthday)
         }
         bind.anniday.setOnClickListener{
             Toast.makeText(requireContext(), "Anniversary, Loading", Toast.LENGTH_SHORT).show()
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_anniversary)
+
         }
         bind.wedday.setOnClickListener{
             Toast.makeText(requireContext(), "Wedding, Loading", Toast.LENGTH_SHORT).show()
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_wedding)
+
         }
         bind.NYay.setOnClickListener{
             Toast.makeText(requireContext(), "New Year, Loading", Toast.LENGTH_SHORT).show()
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_newyear)
         }
         return bind.root
     }
