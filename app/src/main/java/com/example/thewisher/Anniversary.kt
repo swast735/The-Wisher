@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.thewisher.databinding.FragmentAnniversaryBinding
 
 class Anniversary : Fragment() {
 
@@ -12,7 +14,8 @@ class Anniversary : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_anniversary, container, false)
+        val bind:FragmentAnniversaryBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_anniversary, container, false)
+        return  bind.root
     }
 
 }
