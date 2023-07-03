@@ -10,9 +10,6 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_newyear"
-            app:destination="@id/newyear" />
-        <action
             android:id="@+id/action_homeFragment_to_anniversary"
             app:destination="@id/anniversary" />
         <action
@@ -21,6 +18,9 @@
         <action
             android:id="@+id/action_homeFragment_to_wedding"
             app:destination="@id/wedding" />
+        <action
+            android:id="@+id/action_homeFragment_to_newyear"
+            app:destination="@id/newyear" />
     </fragment>
     <fragment
         android:id="@+id/anniversary"
