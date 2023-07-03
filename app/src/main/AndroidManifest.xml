@@ -16,6 +16,9 @@
         android:theme="@style/Theme.TheWisher"
         tools:targetApi="31">
         <activity
+            android:name=".Select_elems"
+            android:exported="false" />
+        <activity
             android:name=".SelectElemsActivity"
             android:exported="false"
             android:label="@string/title_activity_select_elems"
