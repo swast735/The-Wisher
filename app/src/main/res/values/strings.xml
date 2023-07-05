@@ -57,4 +57,9 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="select">Select</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_quote">Enter Quote</string>
+    <string name="name">name</string>
+    <string name="quote">Quote</string>
+    <string name="save">save</string>
 </resources>

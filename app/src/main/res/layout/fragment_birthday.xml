@@ -33,6 +33,7 @@
             android:text="@string/next"
             android:layout_marginBottom="30dp" />
         <Button
+            android:id="@+id/nxtAct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/elems"

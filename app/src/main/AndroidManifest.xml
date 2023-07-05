@@ -16,6 +16,9 @@
         android:theme="@style/Theme.TheWisher"
         tools:targetApi="31">
         <activity
+            android:name=".Enter_dets"
+            android:exported="false" />
+        <activity
             android:name=".Des"
             android:exported="false" />
         <activity

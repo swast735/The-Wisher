@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rtop"
+    android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Des">
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+        <EditText
+            android:id="@+id/strdName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/name"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/aclonica"
+            android:background="@android:color/transparent"/>
+
+            <EditText
+                android:id="@+id/strdQuote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/strdName"
+                android:layout_marginTop="40dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/aclonica"
+                android:hint="@string/quote"
+                android:inputType="textMultiLine"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="150dp"
+                android:src="@drawable/ic_launcher_background" />
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+</RelativeLayout>
