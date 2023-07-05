@@ -6,12 +6,15 @@
 <FrameLayout
     android:id="@+id/WelcomeFrag"
     android:layout_width="match_parent"
+    android:background="@drawable/college"
     android:layout_height="match_parent">
     <TextView
         android:id="@+id/wlcmTxt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/welcome"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="90sp"
         android:gravity="center" />
 
