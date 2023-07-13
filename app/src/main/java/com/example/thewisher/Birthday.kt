@@ -41,22 +41,27 @@ class Birthday : Fragment() {
                     Glide.with(this@Birthday).load(l[0]).into(bind.elems)
                     link=l[0]
                     bind.next.setOnClickListener {
-                        Glide.with(this@Birthday).load(l[++j]).into(bind.elems)
-                        link=l[j]
-                        if(j>=len) {
-                            j = len - 1
-                            Glide.with(this@Birthday).load(l[j]).into(bind.elems)
+                        try {
+                            Glide.with(this@Birthday).load(l[++j]).into(bind.elems)
                             link=l[j]
+                        }catch(e:Exception){
+                            if (j > len) {
+                                j = len-1
+                                link=l[j]
+                                Glide.with(this@Birthday).load(l[j]).into(bind.elems)
+                            }
                         }
                     }
                     bind.prev.setOnClickListener {
-                        j--
-                        Glide.with(this@Birthday).load(l[--j]).into(bind.elems)
-                        link=l[j]
-                        if(j<=-1) {
-                            j = 0
-                            Glide.with(this@Birthday).load(l[j]).into(bind.elems)
+                        try {
+                            Glide.with(this@Birthday).load(l[--j]).into(bind.elems)
                             link=l[j]
+                        }catch(e:Exception){
+                            if (j <= -1) {
+                                j = 0
+                                Glide.with(this@Birthday).load(l[j]).into(bind.elems)
+                                link=l[j]
+                            }
                         }
                     }
                 }

@@ -20,6 +20,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.bumptech.glide.Glide
+import com.theartofdev.edmodo.cropper.CropImage
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -39,7 +40,7 @@ class Des : AppCompatActivity(), View.OnTouchListener {
     lateinit var lay:RelativeLayout
     lateinit var pics:ImageView
     lateinit var buttonSave:Button
-
+    lateinit var url:Uri
     fun saveLayoutAsImage(context: Context, layout: View, fileName: String): Uri? {
         // Create a bitmap from the layout
         val bitmap = viewToBitmap(layout)
@@ -132,12 +133,17 @@ class Des : AppCompatActivity(), View.OnTouchListener {
         try {
             when (requestCode) {
                 1 -> if (resultCode == RESULT_OK) {
-                    val url=data?.data
-                    Glide.with(this).load(url).into(pics)
-                } else if (resultCode == RESULT_CANCELED) {
+                   url = data?.data!!
+                    CropImage.activity(url).start(this)
+                } else if(resultCode == RESULT_CANCELED) {
                     Log.e("tag", "Selecting picture cancelled")
                 }
             }
+            if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+                val res: CropImage.ActivityResult = CropImage.getActivityResult(data)
+                url = res.uri
+                pics.setImageURI(url)
+                Glide.with(this).load(url).into(pics)}
         } catch (e: Exception) {
             Log.e("tag", "Exception in onActivityResult : " + e.message)
         }

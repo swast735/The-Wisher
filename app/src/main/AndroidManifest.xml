@@ -30,6 +30,9 @@
             android:label="@string/title_activity_select_elems"
             android:theme="@style/Theme.TheWisher" />
         <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+        android:theme="@style/Base.Theme.AppCompat"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

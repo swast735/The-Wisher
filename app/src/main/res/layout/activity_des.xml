@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="@string/name"
+            android:textColor="@color/black"
             android:textSize="50sp"
             android:textStyle="bold"
             android:fontFamily="@font/aclonica"
@@ -35,6 +36,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/aclonica"
                 android:hint="@string/quote"
+                android:textColor="@color/black"
                 android:inputType="textMultiLine"
                 android:textSize="20sp"
                 android:textStyle="bold" />
